@@ -42,12 +42,9 @@ class Record:
         self.birthday = None
 
     def add_phone(self, phone_number):
-        try:
-            phone = Phone(phone_number)
-            self.phones.append(phone)
-            return f"Phone number {phone_number} added"
-        except ValueError as e:
-            return str(e)
+        phone = Phone(phone_number)
+        self.phones.append(phone)
+        return f"Phone number {phone_number} added"
 
     def remove_phone(self, phone_number):
         for phone in self.phones:
